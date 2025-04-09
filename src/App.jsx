@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-      {articles.map()}
+      <ul>{articles.map(article => <li>{article.title}</li>)}</ul>
+
     </>
   )
 }
