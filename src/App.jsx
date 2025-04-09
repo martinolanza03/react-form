@@ -6,17 +6,25 @@ import { useState } from 'react'
 function App() {
 
   const [myArticle, setArticle] = useState(articles)
-  let [newArticle, setNewArticle] = useState('');
+  const [newArticle, setNewArticle] = useState('');
 
   const sendForm = event => {
     event.preventDefault();
-    setArticle([...myArticle, newArticle]);
+
+    let pushArticle = {
+      id: myArticle.length + 1,
+      title: newArticle,
+      description: ''
+
+    }
+    setArticle([...myArticle, pushArticle]);
     setNewArticle('');
 
-
     console.log("L'articolo è stato aggiunto");
-    console.log(articles);
+    console.log(myArticle);
   }
+
+
 
   return (
     <>
