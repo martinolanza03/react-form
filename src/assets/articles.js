@@ -1,4 +1,4 @@
-const article = [
+const articles = [
     {
         "id": 1,
         "titolo": "Le meraviglie dello spazio",
@@ -26,4 +26,4 @@ const article = [
     }
 ]
 
-export default article
+export default articles
